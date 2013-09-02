@@ -1,0 +1,8 @@
+@import "partials/shapes";
+
+.testTriangle{
+	@include triangle(100px,up,#f60);
+}
+.circle{
+	@include circle(100px,#f06);
+}

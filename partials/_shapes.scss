@@ -1,0 +1,37 @@
+// Triangle mixins
+@mixin triangle($width,$dir,$color) {
+	@if $dir == up{
+	width: 0; height: 0; 
+	border-left: $width/2 solid transparent;
+	border-right: $width/2 solid transparent;
+	border-bottom: $width/2 solid $color;
+	} 
+		@else if $dir == down{
+	width: 0; height: 0; 
+	border-left: $width/2 solid transparent;
+	border-right: $width/2 solid transparent;
+	border-top: $width/2 solid $color;
+	} 
+		@else if $dir == left{
+	width: 0; height: 0; 
+	border-top: $width/2 solid transparent;
+	border-bottom: $width/2 solid transparent;
+	border-right: $width/2 solid $color;
+	} 
+		@else if $dir == right{
+	width: 0; height: 0; 
+	border-top: $width/2 solid transparent;
+	border-bottom: $width/2 solid transparent;
+	border-left: $width/2 solid $color;
+	}
+}
+
+//Circle mixins
+@mixin circle($width,$color){
+  width: $width;
+  height: $width;
+  background: $color;
+  -webkit-border-radius: $width/2;
+          border-radius: $width/2;
+  background-clip: padding-box;
+}
